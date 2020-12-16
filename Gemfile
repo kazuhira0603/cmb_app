@@ -39,7 +39,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-  gem 'sqlite3', '1.4.2', group: [:development, :test]
 end
 
 group :development do
@@ -57,7 +56,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bcrypt'
 
+group :development, :test do
+  gem 'sqlite3', '1.4.2'
+end
+
 group :production do
-  gem 'pg', group: :production
-  gem 'rails_12factor', '~> 0.0.2'
+  gem 'pg'
 end
