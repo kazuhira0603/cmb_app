@@ -57,9 +57,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt'
 
 group :development, :test do
-  gem 'sqlite3', '1.4.2'
+  gem 'sqlite3'
 end
 
+# 本番環境ではPostgresqlを使う
 group :production do
   gem 'pg'
 end
